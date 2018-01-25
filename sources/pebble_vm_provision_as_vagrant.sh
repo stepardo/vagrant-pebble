@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PEBBLE_SDK=PebbleSDK-3.8.2
+PEBBLE_SDK=pebble-sdk-4.5-linux64
 
 echo "---------------------------------------------------"
 echo "                 Start as vagrant                  "
@@ -14,10 +14,10 @@ cd /home/vagrant/pebble-dev
 echo "---------------------------------------------------"
 echo "              Getting the pebble sdk               "
 echo "---------------------------------------------------"
-wget -q -a /vagrant/pebble.log http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk2/$PEBBLE_SDK.tar.gz
+wget -q -a /vagrant/pebble.log https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/$PEBBLE_SDK.tar.bz2
 
-tar -zxf $PEBBLE_SDK.tar.gz
-rm $PEBBLE_SDK.tar.gz
+tar -xf $PEBBLE_SDK.tar.bz2
+rm $PEBBLE_SDK.tar.bz2
 chown -R vagrant:vagrant /home/vagrant/pebble-dev
 echo "---------------------------------------------------"
 echo "                Setting up profile                 "
