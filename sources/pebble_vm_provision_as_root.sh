@@ -20,6 +20,7 @@ echo "---------------------------------------------------"
 echo "               Reconfiguring languages             "
 echo "---------------------------------------------------"
 sudo dpkg-reconfigure locales
+ln -s /usr/bin/nodejs /usr/bin/node
 echo "---------------------------------------------------"
 echo "                    Done as Root                   "
 echo "---------------------------------------------------"
